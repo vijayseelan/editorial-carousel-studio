@@ -1,0 +1,5 @@
+interface:
+  display_name: "Editorial Carousel Studio"
+  short_description: "Research, validate, design, and animate carousels"
+  brand_color: "#C9362D"
+  default_prompt: "Use $editorial-carousel-studio to create a validated editorial carousel from my topic or source files."

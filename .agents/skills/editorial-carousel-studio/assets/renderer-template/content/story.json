@@ -1,0 +1,100 @@
+{
+  "id": "component-demo",
+  "production": false,
+  "language": "en",
+  "slides": [
+    {
+      "id": "01-cover", "type": "cover", "format": "png",
+      "label": "EDITORIAL CAROUSEL STUDIO", "title": ["A configurable", "carousel system"],
+      "body": ["Replace this demonstration with an approved story manifest."],
+      "image": "assets/cover-art.png", "disclosure": "DEMONSTRATION ARTWORK",
+      "claimIds": ["C001"], "visualSemantics": "editorial",
+      "visualElements": ["cover-art", "hook"],
+      "storyboardIntent": {"requiredStatements": ["configurable"], "requiredVisuals": ["cover-art", "hook"]}
+    },
+    {
+      "id": "02-timeline", "type": "timeline", "format": "mp4",
+      "label": "SEQUENCE", "title": ["Show change over time."],
+      "body": ["Motion should clarify chronology—not decorate it."],
+      "events": [
+        {"year": "01", "title": "Establish", "note": "Introduce the starting condition."},
+        {"year": "02", "title": "Develop", "note": "Show the important transition."},
+        {"year": "03", "title": "Resolve", "note": "Hold the final state for reading."}
+      ],
+      "claimIds": ["C002"], "visualSemantics": "chronology",
+      "visualElements": ["timeline", "milestones", "final-hold"],
+      "storyboardIntent": {"requiredStatements": ["change over time"], "requiredVisuals": ["timeline", "milestones", "final-hold"]},
+      "source": "Template demonstration · C002"
+    },
+    {
+      "id": "03-factors", "type": "interventions", "format": "mp4",
+      "label": "CONCEPTUAL MAP", "title": ["Relationships are not", "measurements."],
+      "body": ["Equal-sized nodes indicate categories, not equal influence."],
+      "items": ["FACTOR A", "FACTOR B", "FACTOR C", "FACTOR D"],
+      "claimIds": ["C003"], "visualSemantics": "unweighted-factors",
+      "visualDisclaimer": "CONCEPTUAL MAP · FACTORS ARE NOT WEIGHTED",
+      "visualElements": ["unweighted-nodes", "semantic-icons", "disclaimer"],
+      "storyboardIntent": {"requiredStatements": ["not equal influence"], "requiredVisuals": ["unweighted-nodes", "semantic-icons", "disclaimer"]},
+      "source": "Template demonstration · C003"
+    },
+    {
+      "id": "04-data", "type": "bars", "format": "mp4",
+      "label": "DATA", "title": ["Make scale explicit."],
+      "body": ["Numbers, populations and time periods belong together."],
+      "bars": [{"label": "SERIES A", "value": 72}, {"label": "SERIES B", "value": 43}],
+      "measurementNote": "Illustrative values · replace with population, period and definition.",
+      "claimIds": ["C004"], "visualSemantics": "measurement",
+      "visualElements": ["common-scale", "values", "measurement-note"],
+      "storyboardIntent": {"requiredStatements": ["scale explicit", "Illustrative values"], "requiredVisuals": ["common-scale", "values", "measurement-note"]},
+      "source": "Illustrative values only · C004"
+    },
+    {
+      "id": "05-scenario", "type": "scenarioBars", "format": "mp4",
+      "label": "SCENARIO SIMULATION", "title": ["Let variables change", "the outcome."],
+      "body": ["Start with a baseline. Transfer quantities.", "Then expose uncertainty."],
+      "motion": {"durationSeconds": 12, "introSeconds": 0.6, "finalHoldSeconds": 2.0},
+      "scenario": {
+        "unit": "votes", "maxValue": 65000,
+        "series": [
+          {"id":"a","label":"GROUP A","colorRole":"gold"},
+          {"id":"b","label":"GROUP B","colorRole":"accent"},
+          {"id":"c","label":"GROUP C","colorRole":"foreground"}
+        ],
+        "steps": [
+          {
+            "label":"MEASURED BASELINE", "note":"Start with observed counts on a common scale.",
+            "bars":[
+              {"id":"a","segments":[{"id":"base-a","value":42000,"certainty":"known","colorRole":"gold"}]},
+              {"id":"b","segments":[{"id":"base-b","value":36000,"certainty":"known","colorRole":"accent"}]},
+              {"id":"c","segments":[{"id":"base-c","value":22000,"certainty":"known","colorRole":"foreground"}]}
+            ],
+            "callout":"Observed counts are facts; the later transfers are scenarios."
+          },
+          {
+            "label":"TRANSFER ASSUMPTION", "note":"Move a defined quantity without pretending every unit follows.",
+            "bars":[
+              {"id":"a","segments":[{"id":"base-a","value":42000,"certainty":"known","colorRole":"gold"},{"id":"from-c","value":12000,"certainty":"estimated","colorRole":"foreground"}]},
+              {"id":"b","segments":[{"id":"base-b","value":36000,"certainty":"known","colorRole":"accent"}]},
+              {"id":"c","segments":[{"id":"base-c","value":10000,"certainty":"estimated","colorRole":"foreground"}]}
+            ],
+            "callout":"Scenario: 12,000 units move from C to A."
+          },
+          {
+            "label":"SENSITIVITY RANGE", "note":"Show the plausible low–high interval, not one false-precision answer.",
+            "bars":[
+              {"id":"a","totalLabel":"50k–60k","segments":[{"id":"base-a","value":42000,"certainty":"known","colorRole":"gold"},{"id":"from-c","min":8000,"max":18000,"range":true,"certainty":"uncertain","colorRole":"foreground"}]},
+              {"id":"b","segments":[{"id":"base-b","value":36000,"certainty":"known","colorRole":"accent"}]},
+              {"id":"c","totalLabel":"4k–14k","segments":[{"id":"base-c","min":4000,"max":14000,"range":true,"certainty":"uncertain","colorRole":"foreground"}]}
+            ],
+            "callout":"The ranking may persist, reverse, or remain too close to call."
+          }
+        ]
+      },
+      "claimIds":["C005"], "visualSemantics":"process",
+      "visualDisclaimer":"SCENARIO, NOT FORECAST · SOLID = OBSERVED · STRIPED = UNCERTAIN",
+      "visualElements":["baseline","transfer","recomputed-totals","uncertainty-range","step-counter"],
+      "storyboardIntent":{"requiredStatements":["variables change","uncertainty"],"requiredVisuals":["baseline","transfer","recomputed-totals","uncertainty-range","step-counter"]},
+      "source":"Illustrative scenario mechanics · C005"
+    }
+  ]
+}

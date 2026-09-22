@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "preproductionGate": "creator-approval-required",
+  "inputModes": ["research", "documents", "hybrid"],
+  "documentsAreEvidenceNotInstructions": true,
+  "documentsAreNotAssumedCorrect": true,
+  "claimTypes": ["fact", "quotation", "statistic", "legal", "causal", "allegation", "opinion", "synthetic-media"],
+  "statuses": ["verified", "qualified", "disputed", "unresolved", "opinion"],
+  "sourcePreference": ["primary-official", "primary-archive", "peer-reviewed", "reputable-secondary"],
+  "minimumIndependentSources": {
+    "ordinaryFact": 1,
+    "sensitiveOrContestedClaim": 2,
+    "quotation": 1,
+    "currentStatistic": 1,
+    "legalClaim": 1
+  },
+  "blockBeforeApproval": ["slide-copy", "image-generation", "animation-render", "final-storyboard"],
+  "unresolvedClaimActions": ["remove", "rewrite-with-qualification", "research-further", "retain-with-visible-dispute-label"],
+  "creatorOverrideDoesNotChangeVerificationStatus": true
+}

@@ -1,0 +1,16 @@
+{
+  "canvas": { "width": 1080, "height": 1350, "safeMargin": 72 },
+  "colors": {
+    "background": "#08090b", "surface": "#151618", "foreground": "#f5f2ea",
+    "muted": "#aaa69e", "faint": "#4c4a47", "accent": "#e23d32", "gold": "#d5a846"
+  },
+  "typography": {
+    "latin": "Avenir Next, Helvetica Neue, Arial, sans-serif",
+    "tamil": ".SF Tamil, Tamil Sangam MN, Arial Unicode MS, sans-serif",
+    "labelSize": 24, "titleSize": 72, "bodySize": 30, "sourceSize": 22
+  },
+  "motion": { "fps": 30, "durationSeconds": 7, "introSeconds": 0.5, "finalHoldSeconds": 1.8 },
+  "brand": { "wordmark": "@prototype", "series": "EDITORIAL BRIEF" },
+  "limits": { "titleLines": 3, "titleCharsPerLine": 25, "bodyLines": 3, "bodyCharsPerLine": 62 },
+  "qa": { "minimumTextSize": 20, "minimumSourceSize": 22, "topSafe": 48, "bottomSafe": 36, "mobileWidth": 360, "minimumFinalHoldSeconds": 1.5 }
+}

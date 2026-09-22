@@ -1,0 +1,13 @@
+{
+  "project": "component-demo",
+  "exampleOnly": true,
+  "inputMode": "research",
+  "gateStatus": "creator-approved",
+  "claims": [
+    {"id":"C001","proposition":"The template demonstrates a configurable carousel system.","type":"opinion","status":"opinion","sources":[],"safeWording":"A configurable carousel system."},
+    {"id":"C002","proposition":"Timeline motion is used to explain sequence.","type":"opinion","status":"opinion","sources":[],"safeWording":"Show change over time."},
+    {"id":"C003","proposition":"The relationship diagram is conceptual and unweighted.","type":"opinion","status":"opinion","sources":[],"safeWording":"Factors are not weighted."},
+    {"id":"C004","proposition":"The displayed values are illustrative rather than empirical.","type":"opinion","status":"opinion","sources":[],"safeWording":"Illustrative values only."},
+    {"id":"C005","proposition":"The scenario values demonstrate animation mechanics and are not a forecast.","type":"opinion","status":"opinion","sources":[],"safeWording":"Scenario mechanics only; not a forecast."}
+  ]
+}

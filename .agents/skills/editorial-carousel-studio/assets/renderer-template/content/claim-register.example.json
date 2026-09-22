@@ -1,0 +1,17 @@
+{
+  "project": "example",
+  "inputMode": "research",
+  "gateStatus": "awaiting-creator-review",
+  "claims": [
+    {
+      "id": "C001",
+      "proposition": "A material factual proposition to be checked before production.",
+      "type": "fact",
+      "status": "unresolved",
+      "sources": [],
+      "validationNote": "No authoritative source has yet been attached.",
+      "safeWording": null,
+      "creatorDecision": null
+    }
+  ]
+}
